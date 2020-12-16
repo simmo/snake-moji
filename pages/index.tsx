@@ -20,7 +20,7 @@ const Home: FC = () => {
 
   const handleGameOver = (score: number) => {
     setPreviousScore(score);
-    // setScreen(Screen.GameOver);
+    setScreen(Screen.GameOver);
   };
 
   return (
