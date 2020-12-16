@@ -1,16 +1,5 @@
-.container {
-  /* align-content: center;
-  align-items: center;
-  display: grid;
-  gap: 1rem;
-  grid-template-rows: repeat(3, auto);
-  justify-content: center;
-  min-height: 100vh;
-  height: 100%;
-  padding: 1rem; */
-}
-
 .board {
+  outline: none;
   position: relative;
 }
 
@@ -26,9 +15,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.countdownInner {
 }
 
 .scoreContainer {
