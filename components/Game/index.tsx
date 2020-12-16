@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef, useState } from 'react';
+import { FC, Fragment, useEffect, useRef, useState } from 'react';
 import SnakeEngine, { State as GameState } from '../../lib/Game';
 import Button from '../Button';
 import Board from '../Board';
@@ -92,7 +92,7 @@ const Game: FC<Props> = ({ onGameOver }) => {
   if (!state) return null;
 
   return (
-    <div className={styles.container}>
+    <div>
       <div className={styles.scoreContainer}>
         Score{' '}
         <span className={styles.score}>
@@ -100,16 +100,14 @@ const Game: FC<Props> = ({ onGameOver }) => {
           <span className={styles.scoreCurrent}>{state.score}</span>
         </span>
       </div>
-      <div className={styles.board} ref={board}>
+      <div className={styles.board} ref={board} tabIndex={-1}>
         <Board
           food={game.current.state.food}
           snake={game.current.state.snake}
           size={21}
         />
         {countdown !== 0 && (
-          <span className={styles.countdown}>
-            <span className={styles.countdownInner}>{countdown}</span>
-          </span>
+          <span className={styles.countdown}>{countdown}</span>
         )}
       </div>
       <div className={styles.actions}>
