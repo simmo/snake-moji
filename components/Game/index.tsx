@@ -63,7 +63,7 @@ const Game: FC<Props> = ({ onGameOver }) => {
     if (countdown > 0) {
       const timer = setTimeout(() => {
         setCountdown((prev) => prev - 1);
-      }, 100);
+      }, 1000);
 
       return () => {
         window.clearTimeout(timer);
