@@ -1,0 +1,12 @@
+.base {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.inner {
+  position: absolute;
+  line-height: 1;
+  font-size: 3vmin;
+}

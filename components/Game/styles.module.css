@@ -1,0 +1,56 @@
+.container {
+  /* align-content: center;
+  align-items: center;
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: repeat(3, auto);
+  justify-content: center;
+  min-height: 100vh;
+  height: 100%;
+  padding: 1rem; */
+}
+
+.board {
+  position: relative;
+}
+
+.countdown {
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-size: 50vmin;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.countdownInner {
+}
+
+.scoreContainer {
+  display: grid;
+  font-size: 2rem;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.score {
+  color: #ccc;
+  font-variant: tabular-nums;
+  text-align: right;
+}
+
+.scoreCurrent {
+  color: #111;
+}
+
+.actions {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 1rem;
+}

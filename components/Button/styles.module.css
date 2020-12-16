@@ -1,0 +1,36 @@
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+.base {
+  appearance: none;
+  background: #10ac84;
+  border: 0;
+  border-radius: 3px;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 1.5rem;
+  padding: 0.7rem 2rem;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+  transform: rotate(-1deg);
+  transition-duration: 0.2s;
+  transition-property: background-color;
+  outline: none;
+}
+
+.base:hover,
+.base:focus {
+  background-color: #1dd1a1;
+}
+
+.pulse {
+  animation: pulse 1s ease-in-out infinite alternate;
+}

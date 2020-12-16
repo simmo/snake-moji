@@ -1,14 +1,28 @@
 html,
 body {
-  padding: 0;
+  color: #111;
+  font-family: 'Cabin Sketch', -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+  font-size: 20px;
+  line-height: 1.2;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 0.9;
 }
 
 a {
-  color: inherit;
+  color: #10ac84;
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 * {

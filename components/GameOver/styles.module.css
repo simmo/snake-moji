@@ -1,0 +1,31 @@
+.container {
+  text-align: center;
+}
+
+.icon {
+  font-size: 3rem;
+}
+
+.heading {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.list {
+  margin: 1rem 0;
+}
+
+.list dt {
+  color: #777;
+}
+
+.list dt:not(:first-child) {
+  margin-top: 1rem;
+}
+
+.list dd {
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}

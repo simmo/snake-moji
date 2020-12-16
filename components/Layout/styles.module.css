@@ -1,0 +1,20 @@
+.container {
+  display: grid;
+  gap: 1rem;
+  min-height: 100vh;
+  height: 100%;
+  padding: 1rem;
+  grid-template-rows: 1fr auto;
+}
+
+.main {
+  align-content: center;
+  align-items: center;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+}
+
+.footer {
+  text-align: center;
+}
