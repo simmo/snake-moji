@@ -98,13 +98,7 @@ export default class Game {
       this.snake.grow(1);
 
       this.generateFood();
-    } else if (
-      head.x < 1 ||
-      head.x > this.config.size ||
-      head.y < 1 ||
-      head.y > this.config.size ||
-      this.snake.isTouching(head, false)
-    ) {
+    } else if (this.snake.isTouching(head, false)) {
       this.config.onGameOver?.(this.score);
       this.stop();
       this.reset();
@@ -125,7 +119,7 @@ export default class Game {
 
     const middle = Math.ceil(this.config.size / 2);
 
-    this.snake = new Snake({ x: middle, y: middle });
+    this.snake = new Snake({ x: middle, y: middle }, this.config.size);
     this.isGameOver = false;
     this.score = 0;
 

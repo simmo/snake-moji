@@ -17,7 +17,7 @@ export default class Snake {
   private direction: Direction = Direction.Right;
   private growthQueue = 0;
 
-  constructor(position: Position) {
+  constructor(position: Position, private readonly size: number) {
     this.body = [
       {
         x: position.x + 1,
@@ -70,16 +70,32 @@ export default class Snake {
 
     switch (this.direction) {
       case Direction.Up:
-        this.body[0].y -= 1;
+        if (this.body[0].y > 0) {
+          this.body[0].y -= 1;
+        } else {
+          this.body[0].y = this.size;
+        }
         break;
       case Direction.Down:
-        this.body[0].y += 1;
+        if (this.body[0].y <= this.size) {
+          this.body[0].y += 1;
+        } else {
+          this.body[0].y = 0;
+        }
         break;
       case Direction.Left:
-        this.body[0].x -= 1;
+        if (this.body[0].x > 0) {
+          this.body[0].x -= 1;
+        } else {
+          this.body[0].x = this.size;
+        }
         break;
       case Direction.Right:
-        this.body[0].x += 1;
+        if (this.body[0].x <= this.size) {
+          this.body[0].x += 1;
+        } else {
+          this.body[0].x = 1;
+        }
         break;
     }
   }
