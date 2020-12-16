@@ -104,13 +104,9 @@ export default class Snake {
     this.growthQueue += amount;
   }
 
-  isTouching(position: Position, includeHead = true, log = false): boolean {
+  isTouching(position: Position, includeHead = true): boolean {
     return this.body.some((segment, index) => {
       if (index === 0 && !includeHead) return false;
-
-      if (log) {
-        console.log(index, segment, position);
-      }
 
       return segment.x === position.x && segment.y === position.y;
     });

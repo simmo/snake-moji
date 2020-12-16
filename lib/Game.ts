@@ -27,7 +27,6 @@ export default class Game {
   private food: Position;
 
   constructor(private readonly config: Config) {
-    console.debug('Game.constructor()');
     this.reset();
   }
 
@@ -42,8 +41,6 @@ export default class Game {
   }
 
   private generateFood() {
-    console.debug('Game.generateFood()');
-
     let position: Position;
 
     while (!position || this.snake.isTouching(position)) {
@@ -54,15 +51,11 @@ export default class Game {
   }
 
   start(): void {
-    console.debug('Game.start()');
-
     this.isPlaying = true;
     this.raf = window.requestAnimationFrame(this.tick.bind(this));
   }
 
   stop(): void {
-    console.debug('Game.stop()');
-
     this.isPlaying = false;
     window.cancelAnimationFrame(this.raf);
   }
@@ -82,8 +75,6 @@ export default class Game {
   }
 
   update(): void {
-    console.debug('Game.update()');
-
     this.snake.move();
 
     const [head] = this.snake.body;
@@ -107,16 +98,12 @@ export default class Game {
   }
 
   command(direction: Direction): void {
-    console.debug('Game.command(' + direction + ')');
-
     if (!this.isPlaying) return;
 
     this.snake.changeDirection(direction);
   }
 
   reset(): void {
-    console.debug('Game.reset()');
-
     const middle = Math.ceil(this.config.size / 2);
 
     this.snake = new Snake({ x: middle, y: middle }, this.config.size);
@@ -129,8 +116,6 @@ export default class Game {
   }
 
   get state(): State {
-    console.debug('state called');
-
     return {
       isGameOver: this.isGameOver,
       isPlaying: this.isPlaying,

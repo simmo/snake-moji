@@ -47,7 +47,6 @@ const Game: FC<Props> = ({ onGameOver }) => {
       } else if (event.code === 'Space') {
         event.preventDefault();
 
-        console.log('play/pause');
         game.current.isPlaying ? game.current.stop() : game.current.start();
       }
     };
