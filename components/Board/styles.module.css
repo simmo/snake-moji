@@ -4,7 +4,14 @@
   border: 0.5vmin solid #ddd;
   border-radius: 3px;
   display: grid;
-  height: 70vmin;
+  height: calc(100vmin - 2rem);
   padding: 1vmin;
-  width: 70vmin;
+  width: calc(100vmin - 2rem);
+}
+
+@media (min-width: 600px) {
+  .board {
+    height: 70vmin;
+    width: 70vmin;
+  }
 }

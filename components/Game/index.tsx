@@ -1,4 +1,4 @@
-import { FC, Fragment, useEffect, useRef, useState } from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
 import SnakeEngine, { State as GameState } from '../../lib/Game';
 import Button from '../Button';
 import Board from '../Board';
