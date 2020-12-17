@@ -1,8 +1,7 @@
 .board {
   background-color: #f9f9f9;
   background-size: 3vmin 3vmin;
-  border: 0.5vmin solid #ddd;
-  border-radius: 3px;
+  border: 2px solid #ddd;
   display: grid;
   height: calc(100vmin - 2rem);
   padding: 1vmin;

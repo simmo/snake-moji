@@ -4,6 +4,8 @@ import Button from '../Button';
 import Board from '../Board';
 import styles from './styles.module.css';
 import { Direction } from '../../lib/types';
+import { Down, Left, Right, Up } from '../Icons';
+import Key from '../Key';
 
 type Props = {
   onGameOver: (score: number) => void;
@@ -58,6 +60,7 @@ const Game: FC<Props> = ({ onGameOver }) => {
     };
   }, []);
 
+  // Effect: Countdown
   useEffect(() => {
     if (countdown > 0) {
       const timer = setTimeout(() => {
@@ -88,6 +91,10 @@ const Game: FC<Props> = ({ onGameOver }) => {
     );
   };
 
+  const handleDirection = (direction: Direction) => () => {
+    game.current.command(direction);
+  };
+
   if (!state) return null;
 
   return (
@@ -108,6 +115,20 @@ const Game: FC<Props> = ({ onGameOver }) => {
         {countdown !== 0 && (
           <span className={styles.countdown}>{countdown}</span>
         )}
+      </div>
+      <div className={styles.directions}>
+        <Key onClick={handleDirection(Direction.Up)}>
+          <Up /> Up
+        </Key>
+        <Key onClick={handleDirection(Direction.Down)}>
+          <Down /> Down
+        </Key>
+        <Key onClick={handleDirection(Direction.Left)}>
+          <Left /> Left
+        </Key>
+        <Key onClick={handleDirection(Direction.Right)}>
+          <Right /> Right
+        </Key>
       </div>
       <div className={styles.actions}>
         <Button onClick={handleRestart}>Restart</Button>

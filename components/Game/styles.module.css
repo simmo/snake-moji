@@ -34,6 +34,14 @@
   color: #111;
 }
 
+.directions {
+  background-color: #ddd;
+  display: grid;
+  gap: 2px;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0 2px 2px 2px;
+}
+
 .actions {
   display: grid;
   gap: 1rem;

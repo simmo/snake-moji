@@ -1,0 +1,17 @@
+.base {
+  appearance: none;
+  background: #eee;
+  border: 0;
+  font: inherit;
+  padding: 0.5rem 1rem;
+}
+
+.inner {
+  align-items: center;
+  align-content: center;
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  grid-template-columns: auto auto;
+}
