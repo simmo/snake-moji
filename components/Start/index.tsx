@@ -1,4 +1,4 @@
-import { FC, useEffect } from 'react';
+import { FC } from 'react';
 import Button from '../Button';
 import styles from './styles.module.css';
 
@@ -7,12 +7,6 @@ type Props = {
 };
 
 const Start: FC<Props> = ({ onStart }) => {
-  useEffect(() => {
-    const audio = new Audio('/sounds/start.mp3');
-
-    audio.play();
-  }, []);
-
   return (
     <div className={styles.container}>
       <span className={styles.icon}>🐍</span>

@@ -15,6 +15,10 @@ const Home: FC = () => {
   const [previousScore, setPreviousScore] = useState(0);
 
   const handleStart = () => {
+    const audio = new Audio('/sounds/start.mp3');
+
+    audio.play();
+
     setScreen(Screen.Game);
   };
 
