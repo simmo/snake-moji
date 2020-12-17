@@ -10,15 +10,17 @@ const Board: FC<Props> = ({ food, size, snake }) => {
   const gridCells = `repeat(${size}, 1fr)`;
 
   return (
-    <div
-      className={styles.board}
-      style={{
-        gridTemplateColumns: gridCells,
-        gridTemplateRows: gridCells,
-      }}
-    >
-      <Snake segments={snake} />
-      <Food position={food} />
+    <div className={styles.board}>
+      <div
+        className={styles.grid}
+        style={{
+          gridTemplateColumns: gridCells,
+          gridTemplateRows: gridCells,
+        }}
+      >
+        <Snake segments={snake} />
+        <Food position={food} />
+      </div>
     </div>
   );
 };

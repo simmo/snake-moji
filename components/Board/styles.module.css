@@ -1,16 +1,27 @@
 .board {
+  width: calc(100vw - 2rem);
+}
+
+.board::before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
+.grid {
   background-color: #f9f9f9;
-  background-size: 3vmin 3vmin;
   border: 2px solid #ddd;
+  bottom: 0;
   display: grid;
-  height: calc(100vmin - 2rem);
+  left: 0;
   padding: 1vmin;
-  width: calc(100vmin - 2rem);
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 @media (min-width: 600px) {
   .board {
-    height: 70vmin;
-    width: 70vmin;
+    width: 100%;
   }
 }
