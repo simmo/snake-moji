@@ -18,3 +18,12 @@
 .footer {
   text-align: center;
 }
+
+.sounds {
+  color: #ccc;
+  font-size: 0.6rem;
+}
+
+.sounds a {
+  color: #bbb;
+}

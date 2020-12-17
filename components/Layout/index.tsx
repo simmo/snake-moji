@@ -17,6 +17,13 @@ const Layout: FC = ({ children }) => {
       <main className={styles.main}>{children}</main>
       <footer className={styles.footer}>
         Made by <a href="https://mike.id">Mike</a>
+        <br />
+        <span className={styles.sounds}>
+          Sounds from{' '}
+          <a href="https://zapsplat.com" target="_blank">
+            Zapsplat.com
+          </a>
+        </span>
       </footer>
     </div>
   );

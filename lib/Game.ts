@@ -14,6 +14,7 @@ interface Config {
   onGameOver?: (score: number) => void;
   onRender?: (state: State) => void;
   onUpdate?: (state: State) => void;
+  onScore?: (score: number) => void;
 }
 
 export default class Game {
@@ -79,7 +80,12 @@ export default class Game {
 
     const [head] = this.snake.body;
 
-    if (head.x === this.food.x && head.y === this.food.y) {
+    if (this.snake.isTouching(head, false)) {
+      this.config.onGameOver?.(this.score);
+      this.stop();
+      this.reset();
+      this.config.onRender(this.state);
+    } else if (head.x === this.food.x && head.y === this.food.y) {
       this.score += 10;
 
       if (this.score % 100 === 0) {
@@ -88,12 +94,9 @@ export default class Game {
 
       this.snake.grow(1);
 
+      this.config.onScore(this.score);
+
       this.generateFood();
-    } else if (this.snake.isTouching(head, false)) {
-      this.config.onGameOver?.(this.score);
-      this.stop();
-      this.reset();
-      this.config.onRender(this.state);
     }
   }
 

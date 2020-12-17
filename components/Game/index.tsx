@@ -29,6 +29,13 @@ const Game: FC<Props> = ({ onGameOver }) => {
     game.current = new SnakeEngine({
       onGameOver,
       onRender: setState,
+      onScore: (score) => {
+        if (score > 0) {
+          const audio = new Audio('/sounds/eat.mp3');
+
+          audio.play();
+        }
+      },
       size: 21,
     });
 
