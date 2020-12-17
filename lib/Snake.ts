@@ -77,7 +77,7 @@ export default class Snake {
         }
         break;
       case Direction.Down:
-        if (this.body[0].y <= this.size) {
+        if (this.body[0].y < this.size) {
           this.body[0].y += 1;
         } else {
           this.body[0].y = 0;
@@ -91,7 +91,7 @@ export default class Snake {
         }
         break;
       case Direction.Right:
-        if (this.body[0].x <= this.size) {
+        if (this.body[0].x < this.size) {
           this.body[0].x += 1;
         } else {
           this.body[0].x = 1;
