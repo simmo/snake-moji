@@ -1,27 +1,10 @@
 .board {
-  width: calc(100vw - 2rem);
-}
-
-.board::before {
-  content: '';
-  display: block;
-  padding-top: 100%;
-}
-
-.grid {
   background-color: #f9f9f9;
   border: 2px solid #ddd;
-  bottom: 0;
   display: grid;
-  left: 0;
   padding: 1vmin;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-@media (min-width: 600px) {
-  .board {
-    width: 100%;
-  }
+  height: calc(100vw - 2rem);
+  width: calc(100vw - 2rem);
+  max-height: calc(30rem - 2rem);
+  max-width: calc(30rem - 2rem);
 }

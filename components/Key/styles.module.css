@@ -2,8 +2,11 @@
   appearance: none;
   background: #eee;
   border: 0;
+  color: inherit;
+  cursor: pointer;
   font: inherit;
   padding: 0.5rem 1rem;
+  margin: 0;
 }
 
 .inner {
