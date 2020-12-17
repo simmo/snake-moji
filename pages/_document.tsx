@@ -29,6 +29,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','${GTM_ID}');`,
             }}
           />
+          <meta
+            name="description"
+            content="A fun project to build a Snake game with CSS grid and a little bit of TypeScript."
+          />
         </Head>
         <body>
           <noscript>
